@@ -5,6 +5,8 @@
  */
 package Views;
 
+import Bean.Bean_Orcamento;
+import DAO.OrcamentoDAO;
 import java.awt.Button;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -85,14 +87,24 @@ public class Form_Orcamento extends JPanel implements ActionListener{
         int valor_datadeemissao = Integer.parseInt(field_datadeemissao.getText());
         int valor_validade = Integer.parseInt(field_validade.getText());
         
-        String armazem = "Valor: "+valor_valor+"\n"
+        
+        Bean_Orcamento o = new Bean_Orcamento();
+        o.setValor(valor_valor);
+        o.setQuantidade(valor_quantidade);
+        o.setContratante(valor_contratante);
+        o.setServicoPrestado(valor_servicoprestado);
+        o.setDataDeEmissao(valor_datadeemissao);
+        o.setValidade(valor_validade);
+        
+        OrcamentoDAO.adicionar(o);
+        /*String armazem = "Valor: "+valor_valor+"\n"
                  +"Qunaridade : "+valor_quantidade+"\n"
                  +"Contratante: "+valor_contratante+"\n"
                  +"Serviço Prestado :"+valor_servicoprestado+"\n"
                  +"Data de Emissao: "+valor_datadeemissao+"\n"
                  +"Data de valiadade: "+valor_validade;
          
-        JOptionPane.showMessageDialog(null, armazem);
+        JOptionPane.showMessageDialog(null, armazem);*/
 
     }
     

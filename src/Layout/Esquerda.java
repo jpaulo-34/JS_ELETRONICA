@@ -15,6 +15,6 @@ import javax.swing.JPanel;
 public class Esquerda extends JPanel {
     public Esquerda(){
        
-        add(new Form_Produtos());
+        
     }
 }

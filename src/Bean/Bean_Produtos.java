@@ -11,6 +11,7 @@ package Bean;
  * @author jpmsa
  */
 public class Bean_Produtos {
+    private int js_ID;
     protected String JS_Titular;
     protected String JS_Modelo;
     protected String JS_Numero_de_Série;
@@ -18,7 +19,7 @@ public class Bean_Produtos {
     protected String JS_Acessorios;
     protected int JS_Número_da_nota_fiscal;
 
-    public Bean_Produtos(String titular, String modelo, String numerodeserie, String condicoesdoproduto, String acessorios, int numerodanotafiscal){
+   /* public Bean_Produtos(String titular, String modelo, String numerodeserie, String condicoesdoproduto, String acessorios, int numerodanotafiscal){
         this.JS_Titular = titular;
         this.JS_Modelo = modelo;
         this.JS_Numero_de_Série = numerodeserie;
@@ -26,7 +27,15 @@ public class Bean_Produtos {
         this.JS_Acessorios = acessorios;
         this.JS_Número_da_nota_fiscal = numerodanotafiscal;
     }
-
+*/
+    
+public void setID(int ID){
+    this.js_ID = ID;
+}
+public int getID(){
+    return this.js_ID;
+}
+    
 public void setTitular(String Titular){
     this.JS_Titular = Titular;
 }
@@ -48,7 +57,7 @@ public String getNumDeSerie(){
     return this.JS_Numero_de_Série;
 }
 
-public void CondicoesDoProduto(String CondicoesDoProduto){
+public void setCondicoesDoProduto(String CondicoesDoProduto){
     this.JS_Condições_do_produto = CondicoesDoProduto;
 }
 public String getCondicoesDoProduto(){
@@ -58,7 +67,7 @@ public String getCondicoesDoProduto(){
 public void setAcessorios(String Acessorios){
     this.JS_Acessorios = Acessorios;
 }
-public String getAceesorios(){
+public String getAcessorios(){
     return this.JS_Acessorios;
 }
 
@@ -69,3 +78,13 @@ public int getNumNotaFiscal(){
     return this.JS_Número_da_nota_fiscal;
 }
 }
+
+/*
+    public void setId(int aInt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setDescricao(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}*/

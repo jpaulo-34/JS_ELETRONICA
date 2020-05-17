@@ -11,19 +11,20 @@ package Bean;
  * @author jpmsa
  */
 public class Bean_Vendas {
+    private int js_ID;
     private int JS_Peças_avulsas;
     private int JS_Televisores;
     private int JS_Geladeiras;
     private int JS_Lavadoras;
     private int JS_Aparelho_de_som;
     
-    public Bean_Vendas(int pecasavulsas, int televisores, int geladeiras, int lavadoras, int aparelhosdesom){
+    /*public Bean_Vendas(int pecasavulsas, int televisores, int geladeiras, int lavadoras, int aparelhosdesom){
     this.JS_Peças_avulsas = pecasavulsas;
     this.JS_Televisores = televisores;
     this.JS_Geladeiras = geladeiras;
     this.JS_Lavadoras = lavadoras;  
     this.JS_Aparelho_de_som = aparelhosdesom;
-    }
+    }*/
     public void setPecasAvulsas(int PecasAvulsas){
         this.JS_Peças_avulsas = PecasAvulsas;
     }

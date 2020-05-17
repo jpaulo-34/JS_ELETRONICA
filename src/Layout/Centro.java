@@ -5,7 +5,11 @@
  */
 package Layout;
 
+import Views.Form_Clientes;
+import Views.Form_Orcamento;
+import Views.Form_Produtos;
 import Views.Form_Tecnico;
+import Views.Form_Vendas;
 
 import javax.swing.JPanel;
 
@@ -17,5 +21,10 @@ public class Centro extends JPanel {
     public Centro(){
        
         add(new Form_Tecnico());
-    }
+        /*add(new Form_Clientes());
+        add(new Form_Vendas());
+        add(new Form_Produtos());
+        add(new Form_Orcamento());*/
 }
+    }
+

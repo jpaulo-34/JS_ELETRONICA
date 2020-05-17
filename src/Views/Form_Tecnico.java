@@ -6,6 +6,8 @@
 package Views;
 
 
+import Bean.Bean_Tecnico;
+import DAO.TecnicoDAO;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -87,14 +89,23 @@ public class Form_Tecnico extends JPanel implements ActionListener {
          double valor_salario = Double.parseDouble(field_salario.getText());
          String valor_formacaoescolar = field_formacaoescolar.getText();
          
-         String armazem = "Nome: "+valor_nome+"\n"
+         Bean_Tecnico t = new Bean_Tecnico();
+         t.setName(valor_nome);
+         t.setCPF(valor_CPF);
+         t.setEspecializacao(valor_especializacao);
+         t.setDataNasc(valor_datadenascimento);
+         t.setSalario(valor_salario);
+         t.setFormacao(valor_formacaoescolar);
+         
+         TecnicoDAO.adicionar(t);
+         /*String armazem = "Nome: "+valor_nome+"\n"
                  +"CPF : "+valor_CPF+"\n"
                  +"Especialização: "+valor_especializacao+"\n"
                  +"Data de Nascimento :"+valor_datadenascimento+"\n"
                  +"Salário: "+valor_salario+"\n"
                  +"Formação Escolar: "+valor_formacaoescolar;
          
-        JOptionPane.showMessageDialog(null, armazem);
+        JOptionPane.showMessageDialog(null, armazem);*/
    }
     
     

@@ -6,6 +6,8 @@
 package Views;
 
 
+import Bean.Bean_Produtos;
+import DAO.ProdutoDAO;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -83,13 +85,23 @@ public class Form_Produtos extends JPanel implements ActionListener{
         String valor_acessorios = field_acessorios.getText();
         int valor_numerodanotafiscal = Integer.parseInt(field_numerodanotafiscal.getText());
         
-        String armazena = "Titular: "+valor_titular+"\n"
+        Bean_Produtos p = new Bean_Produtos();
+        p.setAcessorios(valor_acessorios);
+        p.setModelo(valor_modelo);
+        p.setNumDeSerie(valor_numerodeseire);
+        p.setCondicoesDoProduto(valor_condicoesdoproduto);
+        p.setNumNotaFiscal(valor_numerodanotafiscal);
+        p.setTitular(valor_titular);
+        
+        ProdutoDAO.adicionar(p);
+        
+             /*String armazena = "Titular: "+valor_titular+"\n"
                 +"Modelo: "+valor_modelo+"\n"
                 +"Número de Série: "+valor_numerodeseire+"\n"
                 +"Condições do Produto: "+valor_condicoesdoproduto+"\n"
                 +"Acessórios: "+valor_acessorios+"\n"
                 +"Nota Fiscal: "+valor_numerodanotafiscal;
-        JOptionPane.showMessageDialog(null, armazena);
+        JOptionPane.showMessageDialog(null, armazena);*/
     }
     
 }

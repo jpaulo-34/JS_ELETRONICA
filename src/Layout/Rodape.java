@@ -12,8 +12,7 @@ import Views.Form_Clientes;
  * @author 201816810
  */
 public class Rodape extends JPanel{
-    public Rodape(){
+    
        
-        add(new Form_Clientes());
-}
+      
 }

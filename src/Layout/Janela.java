@@ -14,11 +14,15 @@ import javax.swing.JFrame;
  * @author 201816810
  */
 public class Janela extends JFrame {
+    
+    public static Centro centro = new Centro();
+    
     public Janela(){
+        
         super("Titulo");
         setLayout(new BorderLayout());
         add(new Topo(), BorderLayout.NORTH);
-        add(new Centro(), BorderLayout.CENTER);
+        add(centro, BorderLayout.CENTER);
         add(new Rodape(), BorderLayout.SOUTH);
         add(new Esquerda(),BorderLayout.WEST);
         add(new Direita(), BorderLayout.EAST);
@@ -26,3 +30,4 @@ public class Janela extends JFrame {
         show();
     }
 }
+          

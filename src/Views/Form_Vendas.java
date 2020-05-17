@@ -5,12 +5,13 @@
  */
 package Views;
 
+import Bean.Bean_Vendas;
+import DAO.VendasDAO;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -19,6 +20,7 @@ import javax.swing.JTextField;
  * @author 201816810
  */
 public class Form_Vendas extends JPanel implements ActionListener {
+    
     
     private JTextField field_pecasavulsas;
     private JTextField field_televisores;
@@ -77,14 +79,22 @@ public class Form_Vendas extends JPanel implements ActionListener {
          int valor_lavadoras = Integer.parseInt(field_lavadoras.getText());
          int valor_aparelhosdesom = Integer.parseInt(field_aparelhodesom.getText());
          
-         String armazem = "Peças Avulsas: "+valor_pecasavulsas+"\n"
+         Bean_Vendas v = new Bean_Vendas();
+         v.setPecasAvulsas(valor_pecasavulsas);
+         v.setTelevisores(valor_televisores);
+         v.setGeladeiras(valor_geladeiras);
+         v.setLavadoras(valor_lavadoras);
+         v.setAparelhoDeSom(valor_aparelhosdesom);
+         
+         VendasDAO.adicionar(v);
+        /* String armazem = "Peças Avulsas: "+valor_pecasavulsas+"\n"
                  +"Telvisores : "+valor_televisores+"\n"
                  +"Geladeiras: "+valor_geladeiras+"\n"
                  +"Lavadoras :"+valor_lavadoras+"\n"
                  +"Aparelhos de Som: "+valor_aparelhosdesom+"\n";
                  
          
-        JOptionPane.showMessageDialog(null, armazem);
+        JOptionPane.showMessageDialog(null, armazem);*/
     }
     
 }

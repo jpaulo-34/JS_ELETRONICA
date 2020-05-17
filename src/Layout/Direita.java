@@ -14,6 +14,6 @@ import javax.swing.JPanel;
  */
 public class Direita extends JPanel {
     public Direita(){
-        add(new Form_Vendas());
+        
     }
 }

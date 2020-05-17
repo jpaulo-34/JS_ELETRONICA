@@ -10,6 +10,7 @@ package Bean;
  * @author 201816810
  */
 public class Bean_Orcamento {
+    private int js_ID;
     protected double JS_Valor;
     protected int JS_Quantidade;
     protected String JS_Contratante;
@@ -17,7 +18,8 @@ public class Bean_Orcamento {
     protected int JS_DataEmissao;
     protected int JS_Validade;
 
-    public Bean_Orcamento(double valor, int quantidade, String contratante, String servicoprestado, int datadeemissao, int validade){
+   /* public Bean_Orcamento(double valor, int quantidade, String contratante, String servicoprestado, int datadeemissao, int validade){
+        
         this.JS_Valor = valor;
         this.JS_Quantidade = quantidade;
         this.JS_Contratante = contratante;
@@ -25,8 +27,8 @@ public class Bean_Orcamento {
         this.JS_DataEmissao = datadeemissao;
         this.JS_Validade = validade;
     }
-
-public void setValor(int Valor){
+*/
+public void setValor(double Valor){
     this.JS_Valor = Valor;
 }
 public double getValor(){

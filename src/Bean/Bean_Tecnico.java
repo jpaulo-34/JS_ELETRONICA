@@ -12,6 +12,7 @@ package Bean;
 
 public class Bean_Tecnico extends Bean_Funcionarios{
 
+    private int id;
     private String nome;
     private String CPF ;
     private String especializacao;
@@ -19,7 +20,7 @@ public class Bean_Tecnico extends Bean_Funcionarios{
     private double salario;
     private String formacaoescolar;
     
-    public Bean_Tecnico(String nome, String cpf, String especializacao, String datadenascimento, double salario, String formacaoescolar) {
+    /*public Bean_Tecnico(String nome, String cpf, String especializacao, String datadenascimento, double salario, String formacaoescolar) {
         this.JS_Nome =  nome;
         this.JS_CPF =  cpf;
         this.JS_Especializacao = especializacao;
@@ -28,7 +29,7 @@ public class Bean_Tecnico extends Bean_Funcionarios{
         this.JS_Formacao = formacaoescolar;
     
     }
-    
+    */
     
     
  private String JS_Especializacao;   

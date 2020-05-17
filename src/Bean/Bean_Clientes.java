@@ -12,6 +12,7 @@ package Bean;
  */
 public class Bean_Clientes {
    
+    private int js_ID;
     protected String JS_Nome;
     protected int JS_CPF;
     protected int JS_RG;
@@ -20,7 +21,7 @@ public class Bean_Clientes {
     protected String JS_Número_da_rua;
     protected String JS_Bairro;
     
-    public Bean_Clientes(String Nome, int CPF, int RG, int Telefone, String Rua, String NumRua, String Bairro){
+    /*public Bean_Clientes(String Nome, int CPF, int RG, int Telefone, String Rua, String NumRua, String Bairro){
         this.JS_Nome = Nome;
         this.JS_CPF = CPF;
         this.JS_RG = RG;
@@ -29,7 +30,7 @@ public class Bean_Clientes {
         this.JS_Número_da_rua = NumRua;
         this.JS_Bairro = Bairro;      
     }
-    
+    */
     public void setNome(String Nome){
         this.JS_Nome = Nome;
     }

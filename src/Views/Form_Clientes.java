@@ -5,6 +5,8 @@
  */
 package Views;
 
+import Bean.Bean_Clientes;
+import DAO.ClientesDAO;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -91,7 +93,18 @@ public class Form_Clientes extends JPanel implements ActionListener {
          String valor_numerodacasa = field_numerodacasa.getText();
          String valor_bairro = field_bairro.getText();
          
-         String armazena = "Nome: "+valor_nome1+"\n"
+         Bean_Clientes c = new Bean_Clientes();
+         c.setNome(valor_nome1);
+         c.setCPF(valor_CPF);
+         c.setRG(valor_RG);
+         c.setTelefone(valor_telefone);
+         c.setRua(valor_rua);
+         c.setNumRua(valor_numerodacasa);
+         c.setBairro(valor_bairro);
+         
+         ClientesDAO.adicionar(c);
+         
+         /*String armazena = "Nome: "+valor_nome1+"\n"
                  +"CPF : "+valor_CPF+"\n"
                  +"RG: "+valor_RG+"\n"
                  +"Telefone :"+valor_telefone+"\n"
@@ -99,7 +112,7 @@ public class Form_Clientes extends JPanel implements ActionListener {
                  +"Número da Casa: "+valor_numerodacasa+"\n"
                  +"Bairro:"+valor_bairro;
          
-        JOptionPane.showMessageDialog(null, armazena);
+        JOptionPane.showMessageDialog(null, armazena);*/
     }
   
 }
